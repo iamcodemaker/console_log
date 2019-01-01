@@ -77,14 +77,13 @@
 use log::{Log, Level, Record, Metadata, SetLoggerError};
 use web_sys::console;
 
+static LOGGER: WebConsoleLogger = WebConsoleLogger {};
 
-struct WebConsoleLogger {
-    level: Level,
-}
+struct WebConsoleLogger {}
 
 impl Log for WebConsoleLogger {
     fn enabled(&self, metadata: &Metadata) -> bool {
-        metadata.level() <= self.level
+        metadata.level() <= log::max_level()
     }
 
     fn log(&self, record: &Record) {
@@ -118,8 +117,7 @@ impl Log for WebConsoleLogger {
 /// }
 /// ```
 pub fn init_with_level(level: Level) -> Result<(), SetLoggerError> {
-    let logger = WebConsoleLogger { level };
-    log::set_boxed_logger(Box::new(logger))?;
+    log::set_logger(&LOGGER)?;
     log::set_max_level(level.to_level_filter());
     Ok(())
 }
