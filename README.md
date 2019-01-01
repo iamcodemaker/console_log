@@ -93,4 +93,4 @@ shall be dual licensed as above, without any additional terms or conditions.
 
 ## See Also
 
-- [wasm-bindgen-console-logger](https://github.com/blm768/wasm-bindgen-console-logger)
+- [`wasm-bindgen-console-logger`](https://github.com/blm768/wasm-bindgen-console-logger)
