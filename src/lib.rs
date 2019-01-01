@@ -63,7 +63,7 @@
 //! }
 //! 
 //! #[wasm_bindgen]
-//! fn main() {
+//! pub fn main() {
 //!     init_log();
 //!     // ...
 //! }
