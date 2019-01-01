@@ -1,0 +1,20 @@
+[package]
+name = "console_log"
+version = "0.1.0"
+authors = ["Matthew Nicholson <matt@matt-land.com>"]
+edition = "2018"
+keywords = ["log", "logging", "console", "web_sys", "web"]
+description = "A logging facility that routes Rust log messages to the browser's console."
+license = "MIT/Apache-2.0"
+readme = "README.md"
+categories = ["wasm"]
+repository = "https://github.com/iamcodemaker/console_log"
+documentation = "https://docs.rs/console_log"
+
+[dependencies.log]
+version = "0.4"
+features = ["std"]
+
+[dependencies.web-sys]
+version = "0.3"
+features = ["console"]
