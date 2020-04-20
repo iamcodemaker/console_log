@@ -27,6 +27,19 @@ Rust's log levels map to the browser's console log in the following way.
 | `warn!()`  | `console.warn()`  |
 | `error!()` | `console.error()` |
 
+## Colors
+
+The `"color"` feature adds styling to the log messages.
+
+`Cargo.toml`
+```toml
+console_log = { version = "0.1", features = ["color"] }
+```
+
+The styled log messages will be rendered as follows:
+
+![Styled log messages](img/log_messages_styled.png)
+
 ## Code Size
 
 [Twiggy](https://github.com/rustwasm/twiggy) reports this library adding about

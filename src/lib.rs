@@ -35,6 +35,19 @@
 //! formatting of log messages (timestamps, file and line info, etc.) this crate can be used with
 //! the [`fern`] logger via the [`console_log::log`] function.
 //!
+//! ## Colors
+//!
+//! The `"color"` feature adds styling to the log messages.
+//!
+//! `Cargo.toml`
+//! ```toml
+//! console_log = { version = "0.1", features = ["color"] }
+//! ```
+//!
+//! The styled log messages will be rendered as follows:
+//!
+//! ![Styled log messages](img/log_messages_styled.png)
+//!
 //! # Code Size
 //!
 //! [Twiggy] reports this library adding about 180Kb to the size of a minimal wasm binary in a
