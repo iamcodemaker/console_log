@@ -1,7 +1,7 @@
 /// Log message styling.
 ///
 /// Adapted from <https://gitlab.com/limira-rs/wasm-logger/-/blob/0c16227/src/lib.rs#L72-85>
-pub struct Style<'s> {
+pub(crate) struct Style<'s> {
     pub trace: &'s str,
     pub debug: &'s str,
     pub info: &'s str,
