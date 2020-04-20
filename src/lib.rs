@@ -107,6 +107,7 @@ use wasm_bindgen::JsValue;
 const STYLE: style::Style<'static> = style::Style::default();
 
 #[cfg(feature = "color")]
+#[doc(hidden)]
 mod style;
 
 static LOGGER: WebConsoleLogger = WebConsoleLogger {};
