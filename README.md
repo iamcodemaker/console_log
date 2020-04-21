@@ -33,7 +33,7 @@ The `"color"` feature adds styling to the log messages.
 
 `Cargo.toml`
 ```toml
-console_log = { version = "0.1", features = ["color"] }
+console_log = { version = "0.2", features = ["color"] }
 ```
 
 The styled log messages will be rendered as follows:
@@ -52,7 +52,7 @@ your code for non-release builds.
 [dependencies]
 cfg_if = "0.1"
 log = "0.4"
-console_log = { version = "0.1", optional = true }
+console_log = { version = "0.2", optional = true }
 
 [features]
 default = ["console_log"]

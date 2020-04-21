@@ -1,6 +1,6 @@
 [package]
 name = "console_log"
-version = "0.1.2"
+version = "0.2.0"
 authors = ["Matthew Nicholson <matt@matt-land.com>"]
 edition = "2018"
 keywords = ["log", "logging", "console", "web_sys", "web", "wasm"]
