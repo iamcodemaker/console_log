@@ -57,7 +57,7 @@
 //! `Cargo.toml`
 //! ```toml
 //! [dependencies]
-//! cfg_if = "0.1"
+//! cfg-if = "0.1"
 //! log = "0.4"
 //! console_log = { version = "0.2", optional = true }
 //!
