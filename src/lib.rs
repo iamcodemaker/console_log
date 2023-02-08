@@ -115,6 +115,7 @@ static LOGGER: WebConsoleLogger = WebConsoleLogger {};
 struct WebConsoleLogger {}
 
 impl Log for WebConsoleLogger {
+    #[inline]
     fn enabled(&self, metadata: &Metadata) -> bool {
         metadata.level() <= log::max_level()
     }
@@ -141,6 +142,7 @@ impl Log for WebConsoleLogger {
 ///     .chain(fern::Output::call(console_log::log))
 ///     .apply()?;
 /// ```
+#[cfg_attr(not(feature = "color"), inline)]
 pub fn log(record: &Record) {
     #[cfg(not(feature = "color"))]
     {
@@ -208,6 +210,7 @@ pub fn log(record: &Record) {
 ///     console_log::init_with_level(Level::Debug).expect("error initializing logger");
 /// }
 /// ```
+#[inline]
 pub fn init_with_level(level: Level) -> Result<(), SetLoggerError> {
     log::set_logger(&LOGGER)?;
     log::set_max_level(level.to_level_filter());
@@ -223,6 +226,7 @@ pub fn init_with_level(level: Level) -> Result<(), SetLoggerError> {
 ///     console_log::init().expect("error initializing logger");
 /// }
 /// ```
+#[inline]
 pub fn init() -> Result<(), SetLoggerError> {
     init_with_level(Level::Info)
 }
