@@ -16,7 +16,7 @@ impl Style<'static> {
     pub const fn default() -> Self {
         macro_rules! bg_color {
             ($color:expr) => {
-                concat!("color: white; padding: 0 3px; background: ", $color, ";");
+                concat!("color: white; padding: 0 3px; background: ", $color, ";")
             };
         };
 
