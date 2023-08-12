@@ -41,7 +41,7 @@
 //!
 //! `Cargo.toml`
 //! ```toml
-//! console_log = { version = "0.2", features = ["color"] }
+//! console_log = { version = "1", features = ["color"] }
 //! ```
 //!
 //! The styled log messages will be rendered as follows:
@@ -59,7 +59,7 @@
 //! [dependencies]
 //! cfg-if = "0.1"
 //! log = "0.4"
-//! console_log = { version = "0.2", optional = true }
+//! console_log = { version = "1", optional = true }
 //!
 //! [features]
 //! default = ["console_log"]
