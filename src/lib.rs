@@ -1,5 +1,6 @@
 #![deny(missing_docs)]
 #![doc(html_root_url = "https://docs.rs/console_log/1.0.0")]
+#![no_std]
 
 //! A logger that logs to the browser's console.
 //!
@@ -97,8 +98,14 @@
 //! [`console_log::log`]: fn.log.html
 //! [`fern`]: https://docs.rs/fern
 
+extern crate alloc;
+
+use alloc::format;
 use log::{Level, Log, Metadata, Record, SetLoggerError};
 use web_sys::console;
+
+#[cfg(feature = "color")]
+use alloc::string::ToString;
 
 #[cfg(feature = "color")]
 use wasm_bindgen::JsValue;
