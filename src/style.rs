@@ -18,7 +18,7 @@ impl Style<'static> {
             ($color:expr) => {
                 concat!("color: white; padding: 0 3px; background: ", $color, ";")
             };
-        };
+        }
 
         Style {
             trace: bg_color!("gray"),
