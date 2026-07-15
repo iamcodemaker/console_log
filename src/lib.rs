@@ -1,5 +1,5 @@
 #![deny(missing_docs)]
-#![doc(html_root_url = "https://docs.rs/console_log/1.0.0")]
+#![doc(html_root_url = "https://docs.rs/console_log/1.1.0")]
 #![no_std]
 
 //! A logger that logs to the browser's console.
