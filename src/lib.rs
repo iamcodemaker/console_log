@@ -222,9 +222,7 @@ pub fn init_with_level(level: Level) -> Result<(), SetLoggerError> {
 /// ## Example
 ///
 /// ```
-/// fn main() {
-///     console_log::init().expect("error initializing logger");
-/// }
+/// console_log::init().expect("error initializing logger");
 /// ```
 #[inline]
 pub fn init() -> Result<(), SetLoggerError> {
